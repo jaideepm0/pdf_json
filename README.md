@@ -10,8 +10,8 @@ docker build --platform linux/amd64 -t mysolutionname:somerandomidentifier .
 TEST RUN:
 ```
 docker run --rm \    
-  -v "$(pwd)/input:/app/input" \
-  -v "$(pwd)/output:/app/output" \
+  -v "$(pwd)/test/input:/app/input" \
+  -v "$(pwd)/test/output:/app/output" \
   --network none \
   mysolutionname:somerandomidentifier
 ```
@@ -24,3 +24,4 @@ Due no Internet access `python` is used to rather than `uv`
 
 Final Notes:
 - For general use purposes build and run the docker container based on provided commands
+- `input` && `output` directories are for just for testing purpose
